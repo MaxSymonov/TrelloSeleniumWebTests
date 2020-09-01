@@ -1,4 +1,4 @@
-package org.example.untitled;
+package com.telran.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,14 +22,15 @@ public class MainPageTest {
     }
 
     @Test
-    public void login(){
+    public void testLoginPositive() throws InterruptedException {
         wd.findElement(By.cssSelector("[href='/login']")).click();
         wd.findElement(By.id("user")).sendKeys("maxsimonov9@gmail.com");
+        Thread.sleep(10000);
         wd.findElement(By.id("password")).sendKeys("MaxSimonov87");
         wd.findElement(By.id("login")).click();
     }
 
-    @AfterClass
+    @AfterClass(enabled = false)
     public void tearDown(){
         wd.quit();
     }
