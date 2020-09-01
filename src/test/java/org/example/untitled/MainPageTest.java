@@ -14,7 +14,6 @@ public class MainPageTest {
 
     @BeforeClass
     public void setUp() {
-        ChromeOptions options = new ChromeOptions();
         wd = new ChromeDriver();
         wd.manage().window().maximize();
         wd.manage().deleteAllCookies();
