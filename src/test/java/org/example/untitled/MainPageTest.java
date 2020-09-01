@@ -3,7 +3,6 @@ package org.example.untitled;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -15,10 +14,8 @@ public class MainPageTest {
 
     @BeforeClass
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\webdrivers\\chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("C:\\Program Files\\GoogleChromePortable64\\App\\Chrome-bin\\chrome.exe");
-        wd = new ChromeDriver(options);
+        wd = new ChromeDriver();
         wd.manage().window().maximize();
         wd.manage().deleteAllCookies();
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
