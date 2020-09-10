@@ -19,9 +19,8 @@ public class BoardCreationTests extends TestBase {
     public void createBoard() {
         click(By.xpath("//button[@data-test-id='header-create-menu-button']"));
         click(By.xpath("//button[@data-test-id='header-create-board-button']"));
-        wd.findElement(By.xpath("//input[@data-test-id='create-board-title-input']")).sendKeys("TestBoard5");
-        click(By.xpath("//*[@id='layer-manager-overlay']//button[@data-test-id='create-board-submit-button']"));
-    }
+        type(By.xpath("//input[@data-test-id='create-board-title-input']"), "TestBoard");
+        click(By.xpath("//*[@id='layer-manager-overlay']//button[@data-test-id='create-board-submit-button']"));    }
 
     @Test(dependsOnMethods = {"createBoard"})
     public void backToMain(){

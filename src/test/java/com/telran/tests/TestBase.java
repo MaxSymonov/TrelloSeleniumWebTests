@@ -16,7 +16,9 @@ public class TestBase {
     @BeforeClass
     public void setUp(){
         //create ne instance of WebDriver (ex. open Chrome Browser)
-        wd = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("C:\\Program Files\\GoogleChromePortable64\\App\\Chrome-bin\\chrome.exe");
+        wd = new ChromeDriver(options);
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.manage().window().maximize();
 
