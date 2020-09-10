@@ -1,6 +1,9 @@
 package com.telran.tests;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -19,8 +22,11 @@ public class BoardCreationTests extends TestBase {
     public void createBoard() {
         click(By.xpath("//button[@data-test-id='header-create-menu-button']"));
         click(By.xpath("//button[@data-test-id='header-create-board-button']"));
-        type(By.xpath("//input[@data-test-id='create-board-title-input']"), "TestBoard");
-        click(By.xpath("//*[@id='layer-manager-overlay']//button[@data-test-id='create-board-submit-button']"));    }
+        WebElement wait = new WebDriverWait(wd, 20).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@data-test-id='create-board-title-input']")));
+        wait.sendKeys("TestBoard");
+        WebElement wait2 = new WebDriverWait(wd, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='layer-manager-overlay']//button[@data-test-id='create-board-submit-button']")));
+        wait2.click();
+    }
 
     @Test(dependsOnMethods = {"createBoard"})
     public void backToMain(){
