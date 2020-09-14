@@ -2,8 +2,11 @@ package com.telran.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -87,6 +90,15 @@ public class TestBase {
     public boolean isBoardPresent(){
 
         return wd.findElements(By.xpath("//div[@title='TestBoard']")).size() > 0;
+    }
+    public void waitClickable(By locator){
+        WebElement wait = new WebDriverWait(wd, 20).until(ExpectedConditions.elementToBeClickable(locator));
+        wait.click();
+    }
+
+    public void waitElementLocated(By locator){
+        WebElement wait = new WebDriverWait(wd, 20).until(ExpectedConditions.presenceOfElementLocated(locator));
+        wait.click();
     }
 
 }

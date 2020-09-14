@@ -30,7 +30,7 @@ public class BoardCreationTests extends TestBase {
 
     @Test(dependsOnMethods = {"createBoard"})
     public void backToMain(){
-        click(By.cssSelector("[class='_2ZNy4w8Nfa58d1 _2ZNy4w8Nfa58d1 _1WD42rQsKIT-I6']"));
+        click(By.xpath("//a[@data-test-id='header-home-button']"));
 
     }
 
