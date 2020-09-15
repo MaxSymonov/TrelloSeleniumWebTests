@@ -27,6 +27,14 @@ public class ApplicationManager {
         board = new BoardHelper(wd);
     }
 
+    public SessionHelper getSession() {
+        return session;
+    }
+
+    public BoardHelper getBoard() {
+        return board;
+    }
+
     protected void stop() {
         wd.quit();
     }
