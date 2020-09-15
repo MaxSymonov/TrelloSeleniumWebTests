@@ -9,6 +9,14 @@ import org.testng.annotations.Test;
 
 public class BoardCreationTests extends TestBase {
 
+    @Test()
+    public void loginWithoutAtlassian() {
+        app.click(By.cssSelector("[href='/login']"));
+        app.type(By.name("user"), "maxsimonov9@gmail.com");
+        app.type(By.name("password"), "MaxSimonov87");
+        app.click(By.id("login"));
+    }
+
 
     @Test(dependsOnMethods = {"loginWithoutAtlassian"})
     public void createBoard() {
