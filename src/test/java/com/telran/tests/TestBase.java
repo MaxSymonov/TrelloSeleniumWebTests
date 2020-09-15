@@ -12,10 +12,7 @@ public class TestBase {
         //create ne instance of WebDriver (ex. open Chrome Browser)
         app.init();
 
-        //open Site
-        app.wd.navigate().to("https://trello.com/");
-
-    }
+            }
 
     @AfterClass(enabled = false)
     public void tearDown(){

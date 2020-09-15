@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
     WebDriver wd;
+    SessionHelper session;
+    BoardHelper board;
 
     protected void init() {
         ChromeOptions options = new ChromeOptions();
@@ -20,6 +22,9 @@ public class ApplicationManager {
         wd = new ChromeDriver(options);
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.manage().window().maximize();
+        wd.navigate().to("https://trello.com/");
+        session = new SessionHelper(wd);
+        board = new BoardHelper(wd);
     }
 
     protected void stop() {
@@ -63,30 +68,30 @@ public class ApplicationManager {
         wd.findElement(locator).sendKeys(text);
     }
 
-    public void click(By locator){
+    public void click(By locator) {
         wd.findElement(locator).click();
     }
 
-    public boolean isAvatarPresent(){
+    public boolean isAvatarPresent() {
         return isElementPresent(By.xpath("//button[@data-test-id='header-member-menu-button']"));
     }
 
-    public boolean isElementPresent(By locator){
-        return wd.findElements(locator).size()>0;
+    public boolean isElementPresent(By locator) {
+        return wd.findElements(locator).size() > 0;
     }
 
     @Test()
-    public boolean isBoardPresent(){
+    public boolean isBoardPresent() {
 
         return wd.findElements(By.xpath("//div[@title='TestBoard']")).size() > 0;
     }
 
-    public void waitClickable(By locator){
+    public void waitClickable(By locator) {
         WebElement wait = new WebDriverWait(wd, 20).until(ExpectedConditions.elementToBeClickable(locator));
         wait.click();
     }
 
-    public void waitElementLocated(By locator){
+    public void waitElementLocated(By locator) {
         WebElement wait = new WebDriverWait(wd, 20).until(ExpectedConditions.presenceOfElementLocated(locator));
         wait.click();
     }
@@ -145,10 +150,10 @@ public class ApplicationManager {
     }
 
     @Test()
-    public void loginWithoutAtlassian(){
+    public void loginWithoutAtlassian() {
         click(By.cssSelector("[href='/login']"));
-        type(By.name("user"),"maxsimonov9@gmail.com");
-        type(By.name("password"),"MaxSimonov87");
+        type(By.name("user"), "maxsimonov9@gmail.com");
+        type(By.name("password"), "MaxSimonov87");
         click(By.id("login"));
     }
 }
