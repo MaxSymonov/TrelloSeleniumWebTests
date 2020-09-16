@@ -1,4 +1,4 @@
-package com.telran.tests;
+package com.telran.tests.alltests;
 
 public class BoardModificationTests extends TestBase {
 }
