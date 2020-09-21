@@ -9,5 +9,6 @@ public class TeamTests extends TestBase {
         app.getSession().loginWithoutAtlassian();
         app.getTeam().createTeam();
         app.getTeam().removeTeam();
+        app.getTeam().teamModify();
     }
 }

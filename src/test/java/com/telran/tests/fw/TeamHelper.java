@@ -40,4 +40,15 @@ public class TeamHelper extends HelperBase{
     public boolean ifTeamNotExists(){
         return wd.findElements(By.xpath("//*[contains(text(),'TestTeam')]")).size()<=0;
     }
+
+    @Test
+    public void teamModify(){
+        click(By.xpath("//*[@id='content']//*[@data-test-id='home-team-tab-name']"));
+        click(By.xpath("//*[@id='content']//ul[@class='_1T7jXM3PAP_MoF']/li[4]/a"));
+        click(By.xpath("//*[@id='content']//button[@class='_2DZdmHnY2Nw7gI css-ndnnij']"));
+        type(By.xpath("//*[@id='organization-detail-form']//input[@id='displayName']"), "NewName");
+        type(By.xpath("//*[@id='organization-detail-form']//input[@id='name']"), "testteam35330666");
+        type(By.xpath("//*[@id='organization-detail-form']//textarea[@id='desc']"), "New description");
+        click(By.xpath("//*[@id='organization-detail-form']//button[@class='_1Lu0yISayOOQ85 css-l1zswc']"));
+    }
 }
