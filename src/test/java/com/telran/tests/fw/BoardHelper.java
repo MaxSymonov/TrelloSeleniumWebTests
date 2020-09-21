@@ -53,11 +53,13 @@ public class BoardHelper extends HelperBase {
         return wd.findElements(By.xpath("//div[@title='TestBoard']")).size() > 0;
     }
 
+    @Test
     public void enterBoard() {
         waitClickable(By.xpath("//*[@id='content']//li[@class='boards-page-board-section-list-item']"));
         waitClickable(By.xpath("//*[@id='content']//a[contains(@class, 'js-open-more')]"));
     }
 
+    @Test
     public void closeBoard() {
         waitElementLocated(By.xpath("//*[@id='content']//a[contains(@class, 'js-close-board')]"));
         waitClickable(By.xpath("//*[@id=\"chrome-container\"]//*[@class='js-confirm full negate']"));
