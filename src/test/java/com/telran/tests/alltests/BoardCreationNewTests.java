@@ -12,7 +12,7 @@ public class BoardCreationNewTests extends TestBase {
         app.getHeader().selectCreateBoard();
         app.getBoard().fillBoardForm(new Board().setBoardName("NewTeam").setTeamVisible("public"));
         app.getBoard().confirmBoardCreation();
-        app.getHeader().returnToHomepage();
+        app.getHeader().returnToHomepageFromBoard();
         int after = app.getBoard().getBoardsCount();
         System.out.println("was: " + before + " now: " + after);
         Assert.assertEquals(after, before + 1);

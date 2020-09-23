@@ -35,9 +35,14 @@ public class HeaderHelper extends HelperBase {
         click(By.xpath("//button[@data-test-id='header-member-menu-button']"));
     }
 
-    public void returnToHomepage() {
+    public void returnToHomepageFromBoard() {
         new WebDriverWait(wd, 30)
                 .until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".mod-list-add-button")));
+        click(By.cssSelector("[data-test-id='header-home-button']"));
+    }
+
+    public void returnOnHomePageFromTeam() {
+        waitElementLocated(By.cssSelector(".tabbed-pane-header-content"));
         click(By.cssSelector("[data-test-id='header-home-button']"));
     }
 
