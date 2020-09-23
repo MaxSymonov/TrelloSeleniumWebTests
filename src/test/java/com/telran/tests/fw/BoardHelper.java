@@ -1,5 +1,6 @@
 package com.telran.tests.fw;
 
+import com.telran.tests.model.Board;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -9,9 +10,9 @@ public class BoardHelper extends HelperBase {
         super(wd);
     }
 
-    public void fillBoardForm(String boardName, String teamVisible) {
+    public void fillBoardForm(Board board) {
         //title
-        type(By.xpath("//input[@data-test-id='create-board-title-input']"), boardName);
+        type(By.xpath("//input[@data-test-id='create-board-title-input']"), board.getBoardName());
         //team
         click(By.cssSelector(".W6rMLOx8U0MrPx"));
         //to check!!!!
@@ -21,7 +22,7 @@ public class BoardHelper extends HelperBase {
 
         //public/private ("" + var + "")
         click(By.cssSelector("button._1Lkx3EjS3wCrs7"));
-        click(By.xpath("//*[@name='" + teamVisible + "']/../.."));
+        click(By.xpath("//*[@name='" + board.getTeamVisible() + "']/../.."));
 
 
 //        //confirmPublic
@@ -29,7 +30,7 @@ public class BoardHelper extends HelperBase {
 //            click(By.cssSelector(".X6LMWvod566P68 button"));
 //        }
 
-        if (teamVisible.equals("public")) {
+        if (board.getTeamVisible().equals("public")) {
             click(By.cssSelector(".X6LMWvod566P68 button"));
         }
     }
