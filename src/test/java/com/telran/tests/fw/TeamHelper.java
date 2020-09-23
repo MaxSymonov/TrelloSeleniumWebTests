@@ -1,5 +1,6 @@
 package com.telran.tests.fw;
 
+import com.telran.tests.model.Team;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
@@ -42,13 +43,13 @@ public class TeamHelper extends HelperBase {
     }*/
 
     @Test
-    public void teamModify(String newTestName, String newDescription, String newTag) {
+    public void teamModify(Team team) {
         click(By.xpath("//*[@id='content']//*[@data-test-id='home-team-tab-name']"));
         click(By.xpath("//*[@id='content']//ul[@class='_1T7jXM3PAP_MoF']/li[4]/a"));
         click(By.xpath("//*[@id='content']//button[@class='_2DZdmHnY2Nw7gI css-ndnnij']"));
-        type(By.xpath("//*[@id='organization-detail-form']//input[@id='displayName']"), newTestName);
-        type(By.xpath("//*[@id='organization-detail-form']//input[@id='name']"), newTag);
-        type(By.xpath("//*[@id='organization-detail-form']//textarea[@id='desc']"), newDescription);
+        type(By.xpath("//*[@id='organization-detail-form']//input[@id='displayName']"), team.getNewTestName());
+        type(By.xpath("//*[@id='organization-detail-form']//input[@id='name']"), team.getNewTag());
+        type(By.xpath("//*[@id='organization-detail-form']//textarea[@id='desc']"), team.getNewDescription());
         click(By.xpath("//*[@id='organization-detail-form']//button[@class='_1Lu0yISayOOQ85 css-l1zswc']"));
     }
 

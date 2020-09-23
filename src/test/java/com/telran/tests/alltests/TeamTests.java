@@ -1,5 +1,6 @@
 package com.telran.tests.alltests;
 
+import com.telran.tests.model.Team;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -13,7 +14,7 @@ public class TeamTests extends TestBase {
         int before = app.getTeam().getTeamCount();
         app.getTeam().createTeam("TestTeam" + TimeUnit.MILLISECONDS);
         app.getTeam().removeTeam();
-        app.getTeam().teamModify("NewName" + TimeUnit.MILLISECONDS, "New description", "tag" + TimeUnit.MILLISECONDS);
+        app.getTeam().teamModify(new Team().setNewTestName("NewName" + TimeUnit.MILLISECONDS).setNewDescription("New description").setNewTag("tag" + TimeUnit.MILLISECONDS));
         app.getHeader().returnOnHomePageFromTeam();
         int after = app.getTeam().getTeamCount();
         Assert.assertNotEquals(after, before);
