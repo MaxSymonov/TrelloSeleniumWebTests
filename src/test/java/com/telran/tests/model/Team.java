@@ -1,12 +1,12 @@
 package com.telran.tests.model;
 
 public class Team {
-    private String newTestName;
+    private String TeamName;
     private String newDescription;
     private String newTag;
 
-    public Team setNewTestName(String newTestName) {
-        this.newTestName = newTestName;
+    public Team setTeamName(String TeamName) {
+        this.TeamName = TeamName;
         return this;
     }
 
@@ -20,8 +20,8 @@ public class Team {
         return this;
     }
 
-    public String getNewTestName() {
-        return newTestName;
+    public String getTeamName() {
+        return TeamName;
     }
 
     public String getNewDescription() {
