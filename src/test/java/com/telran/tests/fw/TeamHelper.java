@@ -10,7 +10,6 @@ public class TeamHelper extends HelperBase {
         super(wd);
     }
 
-    @Test
     public void createTeam(Team team) {
 
         click(By.xpath("//*[@id='content']//button[@data-test-id='home-navigation-create-team-button']"));
@@ -25,7 +24,6 @@ public class TeamHelper extends HelperBase {
         //ifTeamExists();
     }
 
-    @Test
     public void removeTeam() {
         click(By.xpath("//*[@id='content']//*[@data-test-id='home-team-tab-name']"));
         click(By.xpath("//*[@id='content']//ul[@class='_1T7jXM3PAP_MoF']/li[4]/a"));
@@ -42,7 +40,6 @@ public class TeamHelper extends HelperBase {
         return wd.findElements(By.xpath("//*[contains(text(),'TestTeam')]")).size()<=0;
     }*/
 
-    @Test
     public void teamModify(Team team) {
         click(By.xpath("//*[@id='content']//*[@data-test-id='home-team-tab-name']"));
         click(By.xpath("//*[@id='content']//ul[@class='_1T7jXM3PAP_MoF']/li[4]/a"));
