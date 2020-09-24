@@ -27,7 +27,6 @@ public class SessionHelper extends HelperBase {
         click(By.id("login-submit"));
     }
 
-    @Test()
     public void loginWithoutAtlassian() {
         click(By.cssSelector("[href='/login']"));
         type(By.name("user"), "maxsimonov9@gmail.com");
