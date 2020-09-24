@@ -22,7 +22,7 @@ public class ProfileHelper extends HelperBase {
         click(By.xpath("//input[contains(@class,'save-changes')]"));
     }
 
-    public void changeEmailFrequency(String option){
-        click(By.xpath("//ul[@class='pop-over-list']"+ option +""));
+    public void changeEmailFrequency(String option) {
+        click(By.xpath("//ul[@class='pop-over-list']" + option + ""));
     }
 }
