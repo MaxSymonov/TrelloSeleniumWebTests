@@ -12,13 +12,10 @@ public class TestBase {
     public void setUp() {
         //create ne instance of WebDriver (ex. open Chrome Browser)
         app.init();
-
     }
 
     @AfterClass(enabled = false)
     public void tearDown() {
         app.stop();
-
     }
-
 }
