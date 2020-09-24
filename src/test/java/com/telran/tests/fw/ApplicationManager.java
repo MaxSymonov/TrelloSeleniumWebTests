@@ -12,6 +12,7 @@ public class ApplicationManager {
     BoardHelper board;
     HeaderHelper header;
     TeamHelper team;
+    ProfileHelper profile;
 
     public void init() {
         ChromeOptions options = new ChromeOptions();
@@ -25,6 +26,7 @@ public class ApplicationManager {
         board = new BoardHelper(wd);
         header = new HeaderHelper(wd);
         team = new TeamHelper(wd);
+        profile = new ProfileHelper(wd);
     }
 
     public SessionHelper getSession() {
@@ -41,6 +43,10 @@ public class ApplicationManager {
 
     public TeamHelper getTeam() {
         return team;
+    }
+
+    public ProfileHelper getProfile() {
+        return profile;
     }
 
     public void stop() {
