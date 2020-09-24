@@ -9,11 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class HelperBaseIc {
     public WebDriver wd;
 
-    public void click (By locator){
+    public void click(By locator) {
         wd.findElement(locator).click();
     }
 
-    public void login(){
+    public void login() {
         click(By.xpath("//ul[@class='header__nav desktop']//li[5]/a"));
         type(By.xpath("//input[@type='email']"), "test9@test.com");
         type(By.xpath("//input[@type='password']"), "MaxSimonov87");

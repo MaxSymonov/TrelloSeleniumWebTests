@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 public class Ilcarro extends HelperBaseIc {
 
     @BeforeClass
-    public void init(){
+    public void init() {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\Program Files\\GoogleChromePortable64\\App\\Chrome-bin\\chrome.exe");
         wd = new ChromeDriver(options);
