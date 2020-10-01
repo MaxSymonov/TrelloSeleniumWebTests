@@ -12,9 +12,9 @@ public class TeamTests extends TestBase {
     public void teamTests() {
         app.getSession().loginWithoutAtlassian();
         int before = app.getTeam().getTeamCount();
-        app.getTeam().createTeam(new Team().setTeamName("TestBoard" + TimeUnit.MILLISECONDS));
+        app.getTeam().createTeam(new Team().setTeamName("TestBoard" + System.currentTimeMillis()));
         app.getTeam().removeTeam();
-        app.getTeam().teamModify(new Team().setTeamName("NewName" + TimeUnit.MILLISECONDS).setNewDescription("New description").setNewTag("tag" + TimeUnit.MILLISECONDS));
+        app.getTeam().teamModify(new Team().setTeamName("NewName" + System.currentTimeMillis()).setNewDescription("New description").setNewTag("tag" + System.currentTimeMillis()));
         app.getHeader().returnOnHomePageFromTeam();
         int after = app.getTeam().getTeamCount();
         Assert.assertNotEquals(after, before);

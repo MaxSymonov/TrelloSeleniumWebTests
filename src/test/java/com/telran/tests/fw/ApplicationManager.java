@@ -3,6 +3,8 @@ package com.telran.tests.fw;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,8 +15,21 @@ public class ApplicationManager {
     HeaderHelper header;
     TeamHelper team;
     ProfileHelper profile;
+    private String browser;
+
+    public ApplicationManager(String browser) {
+        this.browser = browser;
+    }
 
     public void init() {
+        String browser = null;
+        if (
+                browser.equals(BrowserType.CHROME)) {
+            wd = new ChromeDriver();
+        } else if (browser.equals(BrowserType.FIREFOX)) {
+            wd = new FirefoxDriver();
+        }
+
         ChromeOptions options = new ChromeOptions();
         options.setBinary("C:\\Program Files\\GoogleChromePortable64\\App\\Chrome-bin\\chrome.exe");
         wd = new ChromeDriver(options);

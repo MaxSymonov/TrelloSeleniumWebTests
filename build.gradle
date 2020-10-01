@@ -20,6 +20,9 @@ dependencies {
 
 test {
     useTestNG()
+    if (project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
 }
 
 compileJava.options.encoding = 'UTF-8'

@@ -3,7 +3,6 @@ package com.telran.tests.fw;
 import com.telran.tests.model.Team;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
 
 public class TeamHelper extends HelperBase {
     public TeamHelper(WebDriver wd) {

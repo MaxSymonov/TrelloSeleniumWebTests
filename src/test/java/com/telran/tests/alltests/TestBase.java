@@ -1,20 +1,21 @@
 package com.telran.tests.alltests;
 
 import com.telran.tests.fw.ApplicationManager;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.remote.BrowserType;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class TestBase {
 
-    protected final ApplicationManager app = new ApplicationManager();
+    protected static ApplicationManager app = new ApplicationManager(System.getProperty("browser", BrowserType.CHROME));
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() {
         //create ne instance of WebDriver (ex. open Chrome Browser)
         app.init();
     }
 
-    @AfterClass(enabled = false)
+    @AfterSuite(enabled = false)
     public void tearDown() {
         app.stop();
     }
