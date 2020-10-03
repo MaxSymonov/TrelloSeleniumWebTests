@@ -3,7 +3,8 @@ package com.telran.tests.fw;
 import com.telran.tests.model.Board;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BoardHelper extends HelperBase {
     public BoardHelper(WebDriver wd) {
@@ -61,5 +62,17 @@ public class BoardHelper extends HelperBase {
     public void closeBoard() {
         waitElementLocated(By.xpath("//*[@id='content']//a[contains(@class, 'js-close-board')]"));
         waitClickable(By.xpath("//*[@id=\"chrome-container\"]//*[@class='js-confirm full negate']"));
+    }
+
+    public boolean isOnBoardsPage() {
+        String personalBoards = "//*[@class='icon-lg icon-member']/../../..//li" ;
+        new WebDriverWait(wd, 20)
+                .until(ExpectedConditions.presenceOfElementLocated(By.xpath(personalBoards)));
+        return  isElementPresent(By.xpath(personalBoards));
+    }
+
+    public void returnToBoardsPage() {
+        //click(By.cssSelector(".home-left-sidebar-container .icon-board"));
+        waitElementLocated(By.cssSelector(".home-left-sidebar-container .icon-board"));
     }
 }

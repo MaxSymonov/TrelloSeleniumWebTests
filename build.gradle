@@ -18,8 +18,19 @@ dependencies {
     testImplementation('org.testng:testng:7.1.0')
 }
 
-test {
-    useTestNG()
+task testBoards(type:Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-boards.xml'
+    }
+    if (project.hasProperty('browser')){
+        systemProperty 'browser', "${browser}"
+    }
+}
+
+task testRegression(type:Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-regression.xml'
+    }
     if (project.hasProperty('browser')){
         systemProperty 'browser', "${browser}"
     }

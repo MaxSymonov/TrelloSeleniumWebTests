@@ -3,8 +3,6 @@ package com.telran.tests.alltests;
 import com.telran.tests.model.Profile;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
-
 public class ProfileTests extends TestBase {
 
     @Test

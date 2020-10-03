@@ -2,7 +2,6 @@ package com.telran.tests.fw;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 
@@ -15,6 +14,7 @@ public class ApplicationManager {
     HeaderHelper header;
     TeamHelper team;
     ProfileHelper profile;
+
     private String browser;
 
     public ApplicationManager(String browser) {
@@ -22,17 +22,12 @@ public class ApplicationManager {
     }
 
     public void init() {
-        String browser = null;
-        if (
-                browser.equals(BrowserType.CHROME)) {
+        if (browser.equals(BrowserType.CHROME)){
             wd = new ChromeDriver();
-        } else if (browser.equals(BrowserType.FIREFOX)) {
+        } else if(browser.equals(BrowserType.FIREFOX)){
             wd = new FirefoxDriver();
         }
 
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("C:\\Program Files\\GoogleChromePortable64\\App\\Chrome-bin\\chrome.exe");
-        wd = new ChromeDriver(options);
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.manage().window().maximize();
         wd.navigate().to("https://trello.com/");

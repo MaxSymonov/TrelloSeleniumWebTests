@@ -5,8 +5,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BoardCreationNewTests extends TestBase {
+
     @Test
     public void boardCreation() {
+        app.getSession().loginWithoutAtlassian();
         int before = app.getBoard().getBoardsCount();
         app.getHeader().clickOnPlusButton();
         app.getHeader().selectCreateBoard();
