@@ -31,4 +31,13 @@ public class Team {
     public String getNewTag() {
         return newTag;
     }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "TeamName='" + TeamName + '\'' +
+                ", newDescription='" + newDescription + '\'' +
+                ", newTag='" + newTag + '\'' +
+                '}';
+    }
 }

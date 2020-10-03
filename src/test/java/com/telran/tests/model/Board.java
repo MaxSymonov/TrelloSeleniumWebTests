@@ -21,4 +21,12 @@ public class Board {
     public String getTeamVisible() {
         return teamVisible;
     }
+
+    @Override
+    public String toString() {
+        return "Board{" +
+                "boardName='" + boardName + '\'' +
+                ", teamVisible='" + teamVisible + '\'' +
+                '}';
+    }
 }

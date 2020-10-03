@@ -21,4 +21,12 @@ public class Profile {
     public String getOldPassword() {
         return oldPassword;
     }
+
+    @Override
+    public String toString() {
+        return "Profile{" +
+                "newPassword='" + newPassword + '\'' +
+                ", oldPassword='" + oldPassword + '\'' +
+                '}';
+    }
 }
