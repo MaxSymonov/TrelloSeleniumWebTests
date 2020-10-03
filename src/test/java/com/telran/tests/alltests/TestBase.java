@@ -13,6 +13,7 @@ public class TestBase {
     public void setUp() {
         //create ne instance of WebDriver (ex. open Chrome Browser)
         app.init();
+        app.getSession().loginWithoutAtlassian();
     }
 
     @AfterSuite(enabled = false)

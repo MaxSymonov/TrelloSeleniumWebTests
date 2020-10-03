@@ -8,7 +8,6 @@ public class TeamTests extends TestBase {
 
     @Test
     public void teamTests() {
-        app.getSession().loginWithoutAtlassian();
         int before = app.getTeam().getTeamCount();
         app.getTeam().createTeam(new Team().setTeamName("TestBoard" + System.currentTimeMillis()));
         app.getTeam().removeTeam();

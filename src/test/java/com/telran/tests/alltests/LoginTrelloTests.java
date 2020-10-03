@@ -32,7 +32,6 @@ public class LoginTrelloTests extends TestBase {
         Assert.assertTrue(app.getSession().isLoginErrorPresent());
         Assert.assertFalse(app.getHeader().isAvatarPresent());
 
-
     }
 
 }

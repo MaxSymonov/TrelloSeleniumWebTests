@@ -10,12 +10,6 @@ import org.testng.annotations.Test;
 public class BoardCreationTests extends TestBase {
 
     @Test()
-    public void loginWithoutAtlassian() {
-        loginWithoutAtlassian();
-    }
-
-
-    @Test(dependsOnMethods = {"loginWithoutAtlassian"})
     public void createBoard() {
         app.getHeader().clickOnPlusButton();
         app.getHeader().selectCreateBoard();
