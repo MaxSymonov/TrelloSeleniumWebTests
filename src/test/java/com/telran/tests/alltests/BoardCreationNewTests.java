@@ -25,12 +25,12 @@ public class BoardCreationNewTests extends TestBase {
     @DataProvider
     public Iterator<Object[]> validBoardsFromCSV() throws IOException {
         List<Object[]> list = new ArrayList<>();
-        BufferedReader br = new BufferedReader(new FileReader(new File("src/test/resources/boards.csv")));
-        String line = br.readLine();
+        BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/boards.csv")));
+        String line = reader.readLine();
         while (line != null){
             String[] split = line.split(",");
             list.add(new Object[]{new Board().setBoardName(split[0]).setTeamVisible(split[1])});
-            line = br.readLine();
+            line = reader.readLine();
         }
 
         return list.iterator();
