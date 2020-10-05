@@ -31,7 +31,7 @@ public class TeamTests extends TestBase {
         //app.getTeam().createTeam(new Team().setTeamName("TestBoard" + System.currentTimeMillis()));
         app.getTeam().createTeam(new Team().setTeamName(teamName));
         app.getTeam().removeTeam();
-        Team team = new Team().setTeamName(teamName).setNewDescription(newDescription).setNewTag(newTag);
+        new Team().setTeamName(teamName).setNewDescription(newDescription).setNewTag(newTag);
         app.getHeader().returnOnHomePageFromTeam();
         int after = app.getTeam().getTeamCount();
         Assert.assertNotEquals(after, before);
