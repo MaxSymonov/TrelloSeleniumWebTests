@@ -49,4 +49,8 @@ public class HeaderHelper extends HelperBase {
     public void backToMain() {
         click(By.xpath("//a[@data-test-id='header-home-button']"));
     }
+
+    public void openProfile() {
+        click(By.cssSelector("[data-test-id]"));
+    }
 }
