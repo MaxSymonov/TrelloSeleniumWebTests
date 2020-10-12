@@ -14,6 +14,7 @@ public class ApplicationManager {
     HeaderHelper header;
     TeamHelper team;
     ProfileHelper profile;
+    CardsHelper cards;
 
     private String browser;
 
@@ -22,9 +23,9 @@ public class ApplicationManager {
     }
 
     public void init() {
-        if (browser.equals(BrowserType.CHROME)){
+        if (browser.equals(BrowserType.CHROME)) {
             wd = new ChromeDriver();
-        } else if(browser.equals(BrowserType.FIREFOX)){
+        } else if (browser.equals(BrowserType.FIREFOX)) {
             wd = new FirefoxDriver();
         }
 
@@ -57,6 +58,10 @@ public class ApplicationManager {
 
     public ProfileHelper getProfile() {
         return profile;
+    }
+
+    public CardsHelper getCards() {
+        return cards;
     }
 
     public void stop() {

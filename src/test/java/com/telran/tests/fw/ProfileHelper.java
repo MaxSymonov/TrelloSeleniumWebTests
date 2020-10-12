@@ -47,7 +47,7 @@ public class ProfileHelper extends HelperBase {
     }
 
     public void changeAvatar() {
-        new Actions(wd).moveToElement(wd.findElement(By.cssSelector(""))).perform();
+        new Actions(wd).moveToElement(wd.findElement(By.xpath("//button[contains(text(),'Change Avatar…')]"))).perform();
         click(By.cssSelector(""));
     }
 }
