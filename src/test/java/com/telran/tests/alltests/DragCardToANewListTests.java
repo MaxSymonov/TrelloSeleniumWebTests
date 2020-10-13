@@ -8,5 +8,6 @@ public class DragCardToANewListTests extends TestBase{
         app.getCards().enterFirstBoard();
         app.getCards().addList();
         app.getCards().addCard();
+        app.getCards().dragCard();
     }
 }
