@@ -1,4 +1,4 @@
-package com.telran.tests.fw;
+package com.telran.tests.framework;
 
 import com.telran.tests.model.Team;
 import org.openqa.selenium.By;

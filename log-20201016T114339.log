@@ -1,0 +1,16 @@
+11:43:53.125 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [1DPboard, public]
+11:44:03.519 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+11:44:03.520 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [1D-Pboard, public]
+11:44:06.109 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+11:44:06.110 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [1, public]
+11:44:08.784 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+11:44:08.786 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [!@&$, public]
+11:44:11.235 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+11:44:11.238 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreationFromCSV with parameters: [Board{boardName='1', teamVisible='public'}]
+11:44:13.634 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreationFromCSV
+11:44:13.635 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreationFromCSV with parameters: [Board{boardName='qwerty', teamVisible='public'}]
+11:44:15.990 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreationFromCSV
+11:44:15.991 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreationFromCSV with parameters: [Board{boardName='Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt', teamVisible='public'}]
+11:44:19.341 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreationFromCSV
+11:44:19.347 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests startedboardDeletion with parameters: []
+11:44:49.754 [Test worker] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardDeletion
