@@ -1,0 +1,8 @@
+14:13:42.586 [main] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [1DPboard, public]
+14:14:42.764 [main] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+14:14:42.766 [main] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [1D-Pboard, public]
+14:15:05.665 [main] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+14:15:05.667 [main] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [1, public]
+14:15:05.682 [main] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation
+14:15:05.684 [main] INFO  com.telran.tests.alltests.TestBase - Tests startedboardCreation with parameters: [!@&$, public]
+14:15:05.695 [main] INFO  com.telran.tests.alltests.TestBase - Tests stoppedboardCreation

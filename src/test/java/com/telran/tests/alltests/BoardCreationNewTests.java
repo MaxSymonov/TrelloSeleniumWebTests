@@ -8,12 +8,10 @@ public class BoardCreationNewTests extends TestBase {
 
 
     @Test(dataProvider = "validBoards", dataProviderClass = DataProviders.class)
-    public void boardCreation(String boardName, String teamVisibility) {
+    public void boardCreation(Board board) {
         int before = app.getBoard().getBoardsCount();
         app.getHeader().clickOnPlusButton();
         app.getHeader().selectCreateBoard();
-        Board board = new Board().setBoardName(boardName).setTeamVisible(teamVisibility);
-        //app.getBoard().fillBoardForm(new Board().setBoardName("NewTeam").setTeamVisible("public"));
         app.getBoard().fillBoardForm(board);
         app.getBoard().confirmBoardCreation();
         app.getHeader().returnToHomepageFromBoard();

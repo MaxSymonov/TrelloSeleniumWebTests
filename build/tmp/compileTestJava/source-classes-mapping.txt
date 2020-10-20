@@ -1,0 +1,46 @@
+com/telran/tests/alltests/BoardDeletionTests.java
+ com.telran.tests.alltests.BoardDeletionTests
+com/telran/tests/framework/SessionHelper.java
+ com.telran.tests.framework.SessionHelper
+com/telran/tests/framework/HelperBase.java
+ com.telran.tests.framework.HelperBase
+com/telran/tests/alltests/TeamTests.java
+ com.telran.tests.alltests.TeamTests
+com/telran/tests/alltests/BoardCreationNewTests.java
+ com.telran.tests.alltests.BoardCreationNewTests
+com/telran/tests/framework/HeaderHelper.java
+ com.telran.tests.framework.HeaderHelper
+com/telran/tests/alltests/UsersProfileModifiicationTests.java
+ com.telran.tests.alltests.UsersProfileModifiicationTests
+com/telran/tests/framework/CardsHelper.java
+ com.telran.tests.framework.CardsHelper
+com/telran/tests/framework/TeamHelper.java
+ com.telran.tests.framework.TeamHelper
+com/telran/tests/ilcarro/tests/Ilcarro.java
+ com.telran.tests.ilcarro.tests.Ilcarro
+com/telran/tests/alltests/ProfileTests.java
+ com.telran.tests.alltests.ProfileTests
+com/telran/tests/alltests/BoardCreationTests.java
+ com.telran.tests.alltests.BoardCreationTests
+com/telran/tests/framework/ProfileHelper.java
+ com.telran.tests.framework.ProfileHelper
+com/telran/tests/alltests/DragCardToANewListTests.java
+ com.telran.tests.alltests.DragCardToANewListTests
+com/telran/tests/ilcarro/tests/HelperBaseIc.java
+ com.telran.tests.ilcarro.tests.HelperBaseIc
+com/telran/tests/model/Board.java
+ com.telran.tests.model.Board
+com/telran/tests/framework/BoardHelper.java
+ com.telran.tests.framework.BoardHelper
+com/telran/tests/alltests/DataProviders.java
+ com.telran.tests.alltests.DataProviders
+com/telran/tests/alltests/LoginTrelloTests.java
+ com.telran.tests.alltests.LoginTrelloTests
+com/telran/tests/alltests/TestBase.java
+ com.telran.tests.alltests.TestBase
+com/telran/tests/model/Team.java
+ com.telran.tests.model.Team
+com/telran/tests/model/Profile.java
+ com.telran.tests.model.Profile
+com/telran/tests/framework/ApplicationManager.java
+ com.telran.tests.framework.ApplicationManager
