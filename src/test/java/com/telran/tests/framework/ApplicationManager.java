@@ -5,9 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.BrowserType;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 public class ApplicationManager {
+    Properties properties;
     public WebDriver wd;
     SessionHelper session;
     BoardHelper board;
@@ -22,7 +27,9 @@ public class ApplicationManager {
         this.browser = browser;
     }
 
-    public void init() {
+    public void init() throws IOException, InterruptedException {
+        String target = System.getProperty("target", "trelloWeb");
+        properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties", target))));
         if (browser.equals(BrowserType.CHROME)) {
             wd = new ChromeDriver();
         } else if (browser.equals(BrowserType.FIREFOX)) {
@@ -31,13 +38,15 @@ public class ApplicationManager {
 
         wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         wd.manage().window().maximize();
-        wd.navigate().to("https://trello.com/");
+        wd.navigate().to(properties.getProperty("web.url"));
 
         session = new SessionHelper(wd);
         board = new BoardHelper(wd);
         header = new HeaderHelper(wd);
         team = new TeamHelper(wd);
         profile = new ProfileHelper(wd);
+
+        getSession().login(properties.getProperty("web.user"), properties.getProperty("web.password"));
     }
 
     public SessionHelper getSession() {
